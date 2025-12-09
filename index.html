@@ -1,49 +1,81 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
- <meta charset="UTF-8">
- <title>Ville-Propre – Nettoyons Alès</title>
- <style>
-   body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin:0; padding:0; }
-   header { background-color: #2d8a34; color: white; padding: 40px 20px; text-align: center; }
-   header h1 { margin: 0; font-size: 2.5em; }
-   header p { font-size: 1.2em; }
-   section { max-width: 900px; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; }
-   .hero { width: 100%; height: auto; border-radius: 8px; margin-bottom: 15px; }
-   footer { background-color: #2d8a34; color: white; text-align: center; padding: 15px 10px; margin-top: 40px; }
- </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ville-Propre – Nettoyons Alès ensemble</title>
+  <style>
+    /* RESET ET STYLE GLOBAL */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Arial', sans-serif; background: #f0f4f3; color: #333; line-height: 1.6; }
+
+    /* HEADER */
+    header { background: #2d8a34; color: white; text-align: center; padding: 60px 20px; }
+    header h1 { font-size: 3em; margin-bottom: 10px; }
+    header p { font-size: 1.3em; }
+
+    /* BOUTON PARTICIPER */
+    .btn { display: inline-block; background: #ffcc00; color: #2d8a34; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+    .btn:hover { background: #e6b800; }
+
+    /* SECTIONS */
+    section { max-width: 1000px; margin: 40px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+    section h2 { margin-bottom: 15px; color: #2d8a34; }
+    section p { margin-bottom: 15px; }
+
+    /* GALERIE */
+    .gallery { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .gallery img { width: 100%; max-width: 450px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15); transition: transform 0.3s; }
+    .gallery img:hover { transform: scale(1.05); }
+
+    /* FOOTER */
+    footer { background: #2d8a34; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+
+    /* RESPONSIVE */
+    @media(max-width: 600px) {
+      header h1 { font-size: 2em; }
+      .gallery { flex-direction: column; }
+      .gallery img { max-width: 90%; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>Ville-Propre</h1>
-  <p>Association citoyenne – Nettoyons Alès ensemble</p>
-</header>
+  <!-- HEADER -->
+  <header>
+    <h1>Ville-Propre</h1>
+    <p>Ensemble, rendons Alès plus propre et plus belle ! 🌱</p>
+    <a href="mailto:villepropre@contact.fr" class="btn">Je veux participer</a>
+  </header>
 
-<section>
-  <img class="hero" src="nettoyage-des-rues.jpg"alt="Nettoyage-des-rues" />
-</section>
+  <!-- NOTRE MISSION -->
+  <section>
+    <h2>Notre mission 🌍</h2>
+    <p>Ville-Propre est une initiative citoyenne visant à nettoyer, embellir et protéger les rues, parcs et quartiers d’Alès. Ensemble, nous organisons des sorties régulières pour ramasser les déchets et sensibiliser les habitants.</p>
+    <p>Chaque geste compte ! Rejoins-nous pour rendre notre ville plus agréable et inspirer les autres à faire de même.</p>
+  </section>
 
-<section>
-  <h2>Notre mission 🌍</h2>
-  <p>Ville-Propre est une initiative citoyenne visant à nettoyer, embellir et protéger les rues, parcs et quartiers d’Alès. Ensemble, nous organisons des sorties régulières pour ramasser les déchets et sensibiliser les habitants.</p>
-</section>
+  <!-- GALERIE -->
+  <section>
+    <h2>Bénévoles & Actions 📸</h2>
+    <div class="gallery">
+      <img src="nettoyage-des-rues.jpg" alt="Nettoyage des rues">
+      <img src="bénévoles-nettoyage.jpg" alt="Bénévoles nettoyage">
+    </div>
+    <p>Prochainement : dates des actions, photos et moments forts de nos bénévoles.</p>
+  </section>
 
-<section>
-  <h2>Nous rejoindre</h2>
-  <p>Tu veux participer ? Que tu sois seul(e), en famille ou entre amis — tu es le/la bienvenu(e) !</p>
-  <p>Contact : <strong>villepropre@contact.fr</strong></p>
-</section>
+  <!-- NOUS REJOINDRE -->
+  <section>
+    <h2>Nous rejoindre ✨</h2>
+    <p>Tu veux participer ? Seul(e), en famille ou avec des amis, tout le monde est le/la bienvenu(e) !</p>
+    <a href="mailto:villepropre@contact.fr" class="btn">Contacte-nous</a>
+  </section>
 
-<section>
-  <h2>Galerie & Événements</h2>
-  <p>Prochainement : affichage des dates de nettoyage, photos et actions réalisées.</p>
-  <img class="hero" src="benevoles-nettoyage.jpg"alt="Bénévoles-nettoyage" />
-</section>
-
-<footer>
-  © 2025 Ville-Propre – Alès
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Ville-Propre – Alès | Tous droits réservés
+  </footer>
 
 </body>
 </html>
