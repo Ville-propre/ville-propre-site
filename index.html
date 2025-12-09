@@ -1,230 +1,314 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ville Propre - Ensemble Pour Un Avenir Plus Propre</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ville-Propre – Nettoyons Alès Ensemble</title>
+
+    <meta name="description" content="Ville-Propre est une initiative citoyenne pour nettoyer Alès et ses environs. Rejoignez-nous pour des actions bénévoles de propreté urbaine.">
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #222;
+            background: #f7f7f7;
+            color: #333;
         }
 
+        /* HEADER */
         header {
+            background: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
-            border-bottom: 2px solid #eee;
+            padding: 15px 25px;
+            border-bottom: 2px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         header img {
-            height: 60px;
+            height: 55px;
         }
 
         nav a {
             margin-left: 20px;
             text-decoration: none;
+            color: #333;
             font-weight: bold;
-            color: #d62828;
         }
 
+        nav a:hover {
+            color: #009900;
+        }
+
+        /* HERO */
         .hero {
-            background: #f5f5f5;
-            padding: 60px 20px;
+            background: url('nettoyage-des-rues.jpg') center/cover no-repeat;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            padding: 20px;
+            color: white;
+            text-shadow: 1px 1px 4px black;
         }
 
         .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 25px;
+            font-size: 40px;
+            margin: 0;
         }
 
         .hero button {
-            padding: 12px 25px;
-            font-size: 1.1rem;
-            border: none;
-            background: #d62828;
+            margin-top: 25px;
+            background: #e63946;
             color: white;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: 0.25s;
-        }
-
-        .hero button:hover {
-            background: #b71d1d;
-        }
-
-        /* Section stats */
-        #stats {
-            background: #f3f4f6;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        #stats h2 {
-            font-size: 2rem;
-            margin-bottom: 35px;
-        }
-
-        .stats-container {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-
-        .stat-block {
-            text-align: center;
-        }
-
-        .stat-block span {
-            font-size: 2.8rem;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 8px;
-            color: #d62828;
-        }
-
-        /* Photos */
-        .photos {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .photos h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .gallery img {
-            width: 380px;
-            height: auto;
+            border: none;
+            padding: 15px 25px;
+            font-size: 18px;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            cursor: pointer;
         }
 
-        /* Footer */
+        /* SECTIONS */
+        section {
+            padding: 35px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #006600;
+        }
+
+        /* PHOTOS */
+        .photos {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .photos img {
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px #999;
+        }
+
+        /* COMPTEURS */
+        .compteurs {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .compteur {
+            text-align: center;
+        }
+
+        .compteur span {
+            font-size: 40px;
+            font-weight: bold;
+            color: #009900;
+        }
+
+        /* CARTE */
+        #map {
+            height: 350px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #aaa;
+        }
+
+        /* FORMULAIRE */
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            margin-top: 15px;
+            background: #009900;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        form button:hover {
+            background: #007700;
+        }
+
+        /* FOOTER */
         footer {
             margin-top: 40px;
-            text-align: center;
-            background: #d62828;
+            padding: 20px;
+            background: #222;
             color: white;
-            padding: 18px;
+            text-align: center;
         }
 
-        @media (max-width: 720px) {
-            .gallery img { width: 90%; }
+        /* MOBILE */
+        @media screen and (max-width: 750px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            .photos {
+                flex-direction: column;
+            }
+
+            .photos img {
+                width: 100%;
+            }
+
+            .compteurs {
+                flex-direction: column;
+                gap: 20px;
+            }
         }
     </style>
+
+    <!-- LEAFLET (CARTE) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
+
 <body>
 
     <!-- HEADER -->
     <header>
-        <img src="logo-ville-propre.png" alt="logo ville propre" />
+        <img src="logo-ville-propre.png" alt="Logo Ville Propre">
         <nav>
-            <a href="#participer">Je veux participer</a>
+            <a href="#participer">Participer</a>
+            <a href="evenements.html">Événements</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <!-- HERO -->
-    <section class="hero">
-        <h1>Agissons Ensemble Pour Une Ville Plus Propre</h1>
-        <p>Rejoignez-nous dans la mission de rendre nos rues plus agréables et plus saines.</p>
-        <button onclick="window.location.href='#participer'">Je veux participer</button>
-    </section>
+    <div class="hero">
+        <h1>Nettoyons Alès Ensemble</h1>
+        <button onclick="location.href='#participer'">Je veux participer</button>
+    </div>
 
-    <!-- STATS (MODIFIABLES VIA JIT-E) -->
-    <section id="stats">
-        <h2>Nos actions en chiffres</h2>
+    <!-- SECTION 1 -->
+    <section>
+        <h2>Pourquoi nous rejoindre ?</h2>
+        <p>
+            Ville-Propre est une initiative citoyenne qui réunit les habitants d'Alès 
+            pour nettoyer nos rues, nos parcs et nos quartiers. Ensemble, changeons notre ville.
+        </p>
 
-        <div class="stats-container">
-            <div class="stat-block">
-                <span class="count" data-target="1250">1250</span>
-                <p>Kilos de déchets ramassés</p>
+        <div class="photos">
+            <img src="nettoyage-des-rues.jpg" alt="Nettoyage des rues">
+            <img src="benevoles-nettoyage.jpg" alt="Benevoles nettoyage">
+        </div>
+
+        <!-- COMPTEURS -->
+        <div class="compteurs">
+            <div class="compteur">
+                <span data-target="0">0</span><br>Kg ramassés
             </div>
-
-            <div class="stat-block">
-                <span class="count" data-target="83">83</span>
-                <p>Bénévoles actifs</p>
+            <div class="compteur">
+                <span data-target="0">0</span><br>Bénévoles
             </div>
-
-            <div class="stat-block">
-                <span class="count" data-target="42">42</span>
-                <p>Actions menées</p>
+            <div class="compteur">
+                <span data-target="0">0</span><br>Actions menées
             </div>
         </div>
     </section>
 
-    <!-- PHOTOS -->
-    <section class="photos">
-        <h2>Nos actions sur le terrain</h2>
-        <div class="gallery">
-            <img src="nettoyage-des-rues.jpg" alt="nettoyage des rues" />
-            <img src="benevoles-nettoyage.jpg" alt="benevoles nettoyage" />
-        </div>
+    <!-- CARTE -->
+    <section>
+        <h2>Zone d'intervention</h2>
+        <p>Voici notre zone d’action : Alès + un rayon de 15 km.</p>
+        <div id="map"></div>
     </section>
 
     <!-- PARTICIPER -->
-    <section id="participer" style="padding:40px; text-align:center;">
-        <h2>Participer</h2>
-        <p>Envie d’aider ? Rejoins notre équipe de bénévoles motivés !</p>
-        <button onclick="window.location.href='https://formspree.io/f/xrbnavrz'">
-            Je m'inscris
-        </button>
+    <section id="participer">
+        <h2>Participer à une action</h2>
+        <p>Remplissez ce formulaire pour rejoindre l’équipe :</p>
+
+        <form action="https://formspree.io/f/xrbnavrz" method="POST">
+            <input type="text" name="Nom" placeholder="Votre nom" required>
+            <input type="email" name="Email" placeholder="Votre email" required>
+            <textarea name="Message" placeholder="Pourquoi souhaitez-vous participer ?" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" style="padding:40px; text-align:center;">
+    <section id="contact">
         <h2>Contact</h2>
-        <p>Une question ? Une suggestion ? Écris-nous.</p>
-        <button onclick="window.location.href='https://formspree.io/f/xrbnavrz'">
-            Nous contacter
-        </button>
+        <p>Email : <strong>villepropre.association@gmail.com</strong></p>
     </section>
 
-    <!-- FOOTER -->
     <footer>
-        Ville Propre © 2025 — Ensemble rendons notre ville meilleure.
+        Ville-Propre © 2025 – Tous droits réservés.
     </footer>
 
-    <!-- COMPTEUR ANIMÉ -->
+    <!-- JS COMPTEURS -->
     <script>
-        const counters = document.querySelectorAll('.count');
+        const counters = document.querySelectorAll(".compteur span");
 
-        counters.forEach(counter => {
-            const update = () => {
-                const target = +counter.getAttribute('data-target');
-                const current = +counter.innerText;
-                const increment = target / 100;
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                counter.innerText = "0";
+                const target = +counter.getAttribute("data-target");
+                const increment = target / 200;
 
-                if (current < target) {
-                    counter.innerText = Math.ceil(current + increment);
-                    setTimeout(update, 20);
-                } else {
-                    counter.innerText = target;
-                }
-            };
+                const updateCounter = () => {
+                    const value = +counter.innerText;
+                    if (value < target) {
+                        counter.innerText = Math.ceil(value + increment);
+                        setTimeout(updateCounter, 10);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
 
-            update();
+                updateCounter();
+            });
+        };
+
+        window.addEventListener("scroll", () => {
+            const section = document.querySelector(".compteurs");
+            const top = section.getBoundingClientRect().top;
+
+            if (top < window.innerHeight - 100) animateCounters();
         });
+    </script>
+
+    <!-- JS CARTE -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map').setView([44.125, 4.078], 12);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Carte © OpenStreetMap'
+        }).addTo(map);
+
+        const circle = L.circle([44.125, 4.078], {
+            color: "green",
+            fillColor: "#80ff80",
+            fillOpacity: 0.3,
+            radius: 15000
+        }).addTo(map);
     </script>
 
 </body>
