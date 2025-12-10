@@ -1,1 +1,262 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participer - Ville Propre</title>
+    <meta name="description" content="Rejoignez Ville Propre ! Découvrez comment participer à nos actions, créer un groupe local ou soutenir notre mouvement.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-leaf"></i>
+                    Ville Propre
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">Qui sommes-nous</a></li>
+                    <li><a href="events.html">Agenda</a></li>
+                    <li><a href="join.html" class="active">Participer</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="join.html" class="btn btn-principal btn-small">Je participe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Rejoignez le mouvement</h1>
+            <p>Que vous ayez 30 minutes ou 3 heures à donner, que vous soyez seul, en famille ou entre amis, il y a une place pour vous dans l'aventure Ville Propre.</p>
+        </div>
+    </section>
+
+    <!-- 3 façons de participer -->
+    <section>
+        <div class="container">
+            <h2>Les 3 façons de nous rejoindre</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Je participe à une action existante</h3>
+                    <p>Trouvez un événement près de chez vous et inscrivez-vous en 2 minutes. Pas besoin d'expérience, juste de l'enthousiasme !</p>
+                    <a href="events.html" class="btn btn-principal" style="margin-top: 20px;">Voir l'agenda</a>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Je crée un nouveau groupe local</h3>
+                    <p>Vous avez l'âme d'un organisateur ? Lancez Ville Propre dans votre quartier. Nous vous accompagnons pas à pas.</p>
+                    <a href="contact.html" class="btn btn-secondaire" style="margin-top: 20px;">Devenir initiateur</a>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Je soutiens à distance</h3>
+                    <p>Don ponctuel, expertise, partage sur les réseaux : chaque soutien compte pour faire grandir le mouvement.</p>
+                    <a href="support.html" class="btn btn-secondaire" style="margin-top: 20px;">Soutenir l'association</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Déroulé d'une action -->
+    <section class="section-grise">
+        <div class="container">
+            <h2>Comment se déroule une action type ?</h2>
+            
+            <div class="presentation-content">
+                <div class="presentation-text">
+                    <h3>Avant l'action</h3>
+                    <ul>
+                        <li>Inscription en ligne (pour prévoir le matériel)</li>
+                        <li>Recevez le lieu exact et les consignes par email</li>
+                        <li>Pas besoin d'expérience, juste de l'enthousiasme !</li>
+                    </ul>
+                    
+                    <h3 style="margin-top: 30px;">Pendant l'action (2-3 heures)</h3>
+                    <ol>
+                        <li><strong>Accueil & briefing</strong> (15 min) - Café/thé offert</li>
+                        <li><strong>Ramasse en petits groupes</strong> (1h30) - Matériel fourni</li>
+                        <li><strong>Tri & comptage</strong> (30 min) - On mesure notre impact !</li>
+                        <li><strong>Partage & échanges</strong> (15 min) - Moment convivial</li>
+                    </ol>
+                    
+                    <h3 style="margin-top: 30px;">Après l'action</h3>
+                    <ul>
+                        <li>Photos des résultats (optionnel)</li>
+                        <li>Newsletter avec les chiffres de l'action</li>
+                        <li>Invitation aux prochains événements</li>
+                    </ul>
+                </div>
+                <div class="presentation-image">
+                    <img src="assets/images/action.jpg" alt="Déroulement d'une action Ville Propre">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Téléchargements -->
+    <section>
+        <div class="container">
+            <h2>Ressources utiles</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">Téléchargez nos guides et documents pour préparer votre première action ou aller plus loin dans votre engagement.</p>
+            
+            <div class="downloads">
+                <div class="download-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Guide du bénévole</h3>
+                    <p>Tout ce qu'il faut savoir pour sa première action (PDF, 12 pages)</p>
+                    <a href="#" class="btn btn-small" style="margin-top: 15px;">Télécharger</a>
+                </div>
+                
+                <div class="download-item">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h3>Checklist organisateur</h3>
+                    <p>Pour ceux qui veulent organiser une action (PDF, 8 pages)</p>
+                    <a href="#" class="btn btn-small" style="margin-top: 15px;">Télécharger</a>
+                </div>
+                
+                <div class="download-item">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Kit communication</h3>
+                    <p>Logos, visuels, textes pour partager l'info (ZIP, 5 Mo)</p>
+                    <a href="#" class="btn btn-small" style="margin-top: 15px;">Télécharger</a>
+                </div>
+                
+                <div class="download-item">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>Modèles documents</h3>
+                    <p>Autorisation mairie, assurance, etc. (ZIP, 3 Mo)</p>
+                    <a href="#" class="btn btn-small" style="margin-top: 15px;">Télécharger</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Participation -->
+    <section class="section-beige">
+        <div class="container">
+            <h2>Questions fréquentes sur la participation</h2>
+            
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Dois-je m'engager sur la durée ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Non, pas du tout ! Vous pouvez venir une seule fois pour voir, ou participer régulièrement. Chaque participation est précieuse, quelle que soit sa fréquence.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Y a-t-il un âge minimum ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Les mineurs de moins de 16 ans doivent être accompagnés d'un adulte responsable. Entre 16 et 18 ans, une autorisation parentale est nécessaire (modèle fourni).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Suis-je couvert par une assurance ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, toutes nos actions sont couvertes par une assurance responsabilité civile spécifique aux actions bénévoles. Vous recevrez les détails lors de l'inscription.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Puis-je venir avec mon entreprise/école ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolument ! Nous organisons régulièrement des actions dédiées aux groupes (entreprises, écoles, associations). <a href="contact.html">Contactez-nous</a> pour organiser une action sur mesure.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <h3>Prêt à faire le premier pas ?</h3>
+                <p>Rejoignez des centaines de citoyens qui ont déjà choisi d'agir pour leur environnement.</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+                    <a href="events.html" class="btn btn-principal">Je participe à une action</a>
+                    <a href="contact.html" class="btn btn-secondaire">Je souhaite plus d'informations</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ville Propre</h3>
+                    <p>Redonnons à notre environnement sa beauté originelle. Rejoignez le mouvement citoyen pour des quartiers plus propres et plus solidaires.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">Qui sommes-nous</a></li>
+                        <li><a href="events.html">Agenda des actions</a></li>
+                        <li><a href="join.html">Comment participer</a></li>
+                        <li><a href="impact.html">Notre impact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> contact@ville-propre.org</li>
+                        <li><i class="fas fa-phone"></i> 06 12 34 56 78</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Maison des Associations, 75000</li>
+                        <li><a href="contact.html">Formulaire de contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="current-year">2024</span> Ville Propre. Tous droits réservés. | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
