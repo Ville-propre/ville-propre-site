@@ -1,1 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda des actions - Ville Propre</title>
+    <meta name="description" content="Consultez l'agenda des prochaines actions de nettoyage et d'ateliers Ville Propre près de chez vous. Inscrivez-vous en ligne !">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-leaf"></i>
+                    Ville Propre
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">Qui sommes-nous</a></li>
+                    <li><a href="events.html" class="active">Agenda</a></li>
+                    <li><a href="join.html">Participer</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="events.html" class="btn btn-principal btn-small">Voir les actions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Agenda des actions</h1>
+            <p>Choisissez votre prochaine action parmi nos événements de nettoyage, ateliers et actions de sensibilisation. Rejoignez-nous pour faire la différence !</p>
+        </div>
+    </section>
+
+    <!-- Filtres -->
+    <section class="section-grise">
+        <div class="container">
+            <div class="filtres">
+                <h3 style="text-align: left; margin-bottom: 20px;">Trouvez l'action qui vous correspond</h3>
+                <form id="filterForm">
+                    <div class="form-group">
+                        <label for="filter-type">Type d'action</label>
+                        <select id="filter-type">
+                            <option value="all">Tous les types</option>
+                            <option value="nettoyage">Nettoyage</option>
+                            <option value="atelier">Atelier zéro déchet</option>
+                            <option value="sensibilisation">Action de sensibilisation</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="filter-lieu">Lieu</label>
+                        <select id="filter-lieu">
+                            <option value="all">Tous les lieux</option>
+                            <option value="parc">Parcs et espaces verts</option>
+                            <option value="quartier">Quartiers résidentiels</option>
+                            <option value="berge">Berges et rivières</option>
+                            <option value="plage">Plages et littoral</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="filter-date">Date</label>
+                        <input type="date" id="filter-date">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>&nbsp;</label>
+                        <div style="display: flex; gap: 10px;">
+                            <button type="submit" class="btn btn-principal">Filtrer</button>
+                            <button type="button" id="resetFilters" class="btn btn-secondaire">Réinitialiser</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Événements -->
+    <section>
+        <div class="container">
+            <h2>Prochaines actions</h2>
+            
+            <div id="no-results" style="display: none; text-align: center; padding: 40px; background-color: var(--beige); border-radius: 10px; margin-bottom: 30px;">
+                <i class="fas fa-search" style="font-size: 3rem; color: var(--gris); margin-bottom: 20px;"></i>
+                <h3>Aucun événement ne correspond à vos critères</h3>
+                <p>Essayez de modifier vos filtres ou <a href="contact.html">contactez-nous</a> pour créer une action dans votre quartier.</p>
+            </div>
+            
+            <div class="evenements">
+                <!-- Événement 1 -->
+                <div class="evenement" data-type="nettoyage">
+                    <div class="evenement-image">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <div class="evenement-content">
+                        <span class="evenement-date">Samedi 15 juin • 9h30-12h</span>
+                        <h3>Nettoyage des berges du canal</h3>
+                        <p class="evenement-lieu">
+                            <i class="fas fa-map-marker-alt"></i> Pont des Arts, quai droite
+                        </p>
+                        <p>Le printemps a laissé quelques traces le long de notre cher canal. Rejoignez-nous pour une matinée conviviale entre terre et eau.</p>
+                        <div class="evenement-participants">
+                            <span><i class="fas fa-users"></i> 12/25 inscrits</span>
+                            <a href="join.html" class="btn btn-principal btn-small">Je m'inscris</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Événement 2 -->
+                <div class="evenement" data-type="atelier">
+                    <div class="evenement-image">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <div class="evenement-content">
+                        <span class="evenement-date">Mercredi 19 juin • 18h-20h</span>
+                        <h3>Atelier produits ménagers naturels</h3>
+                        <p class="evenement-lieu">
+                            <i class="fas fa-map-marker-alt"></i> Maison de quartier Centre
+                        </p>
+                        <p>Apprenez à fabriquer vos propres produits ménagers écologiques et économiques. Repartez avec vos créations !</p>
+                        <div class="evenement-participants">
+                            <span><i class="fas fa-users"></i> 8/15 inscrits</span>
+                            <a href="join.html" class="btn btn-principal btn-small">Je m'inscris</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Événement 3 -->
+                <div class="evenement" data-type="nettoyage">
+                    <div class="evenement-image">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <div class="evenement-content">
+                        <span class="evenement-date">Dimanche 23 juin • 10h-13h</span>
+                        <h3>Grand nettoyage du parc municipal</h3>
+                        <p class="evenement-lieu">
+                            <i class="fas fa-map-marker-alt"></i> Parc municipal, entrée principale
+                        </p>
+                        <p>Action familiale avec parcours adapté aux enfants. Goûter zéro déchet offert à tous les participants.</p>
+                        <div class="evenement-participants">
+                            <span><i class="fas fa-users"></i> 18/30 inscrits</span>
+                            <a href="join.html" class="btn btn-principal btn-small">Je m'inscris</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Événement 4 -->
+                <div class="evenement" data-type="sensibilisation">
+                    <div class="evenement-image">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="evenement-content">
+                        <span class="evenement-date">Samedi 29 juin • 14h-16h</span>
+                        <h3>Sensibilisation au marché central</h3>
+                        <p class="evenement-lieu">
+                            <i class="fas fa-map-marker-alt"></i> Marché central, stand Ville Propre
+                        </p>
+                        <p>Venez discuter avec nous des alternatives au plastique et des gestes simples pour réduire ses déchets au quotidien.</p>
+                        <div class="evenement-participants">
+                            <span><i class="fas fa-users"></i> 5/10 bénévoles recherchés</span>
+                            <a href="join.html" class="btn btn-principal btn-small">Je participe</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Événement 5 -->
+                <div class="evenement" data-type="nettoyage">
+                    <div class="evenement-image">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <div class="evenement-content">
+                        <span class="evenement-date">Samedi 6 juillet • 9h-12h</span>
+                        <h3>Nettoyage du quartier des Oliviers</h3>
+                        <p class="evenement-lieu">
+                            <i class="fas fa-map-marker-alt"></i> Place des Oliviers
+                        </p>
+                        <p>Première action dans ce nouveau quartier. Objectif : montrer l'exemple et créer un groupe local.</p>
+                        <div class="evenement-participants">
+                            <span><i class="fas fa-users"></i> 6/20 inscrits</span>
+                            <a href="join.html" class="btn btn-principal btn-small">Je m'inscris</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Événement 6 -->
+                <div class="evenement" data-type="atelier">
+                    <div class="evenement-image">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="evenement-content">
+                        <span class="evenement-date">Mercredi 10 juillet • 17h-19h</span>
+                        <h3>Atelier compostage et lombricompost</h3>
+                        <p class="evenement-lieu">
+                            <i class="fas fa-map-marker-alt"></i> Jardin partagé du Centre
+                        </p>
+                        <p>Découvrez comment transformer vos déchets organiques en engrais naturel, même en appartement !</p>
+                        <div class="evenement-participants">
+                            <span><i class="fas fa-users"></i> 10/15 inscrits</span>
+                            <a href="join.html" class="btn btn-principal btn-small">Je m'inscris</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <p><strong>Pas d'action près de chez vous ?</strong> Devenez initiateur et organisez la première action dans votre quartier !</p>
+                <a href="contact.html" class="btn btn-principal" style="margin-top: 15px;">Créer une action</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Événements -->
+    <section class="section-beige">
+        <div class="container">
+            <h2>Questions fréquentes</h2>
+            
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Dois-je apporter du matériel ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Non, tout est fourni ! Gants adaptés à votre taille, sacs, pinceaux, et même l'eau. Il vous suffit de venir avec des chaussures adaptées et de la bonne humeur.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Et si je ne suis pas très sportif ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pas de problème ! Certains participants se concentrent sur le tri, d'autres sur l'accueil, d'autres encore sur la coordination. Chacun participe à son rythme et selon ses capacités.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Peut-on venir avec des enfants ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolument ! À partir de 6 ans accompagnés, et nous avons du matériel adapté aux petites mains. C'est une excellente activité pédagogique en famille.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Que se passe-t-il en cas de pluie ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Les actions sont maintenues sauf conditions météorologiques dangereuses. Nous vous prévenons par email la veille si un report est nécessaire.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ville Propre</h3>
+                    <p>Redonnons à notre environnement sa beauté originelle. Rejoignez le mouvement citoyen pour des quartiers plus propres et plus solidaires.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">Qui sommes-nous</a></li>
+                        <li><a href="events.html">Agenda des actions</a></li>
+                        <li><a href="join.html">Comment participer</a></li>
+                        <li><a href="impact.html">Notre impact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> contact@ville-propre.org</li>
+                        <li><i class="fas fa-phone"></i> 06 12 34 56 78</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Maison des Associations, 75000</li>
+                        <li><a href="contact.html">Formulaire de contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="current-year">2024</span> Ville Propre. Tous droits réservés. | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
